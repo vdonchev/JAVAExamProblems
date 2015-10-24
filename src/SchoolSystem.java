@@ -34,7 +34,6 @@ public class SchoolSystem {
             System.out.printf("%s: ", studentName);
 
             ArrayList<String> allAverageGrades = new ArrayList<>();
-
             for (Map.Entry<String, ArrayList<Integer>> subject : gradesLog.get(studentName).entrySet()) {
                 allAverageGrades.add(String.format(
                         "%s - %.2f",
