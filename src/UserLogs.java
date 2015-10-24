@@ -16,7 +16,6 @@ public class UserLogs {
 
         String command;
         while (!(command = scanner.nextLine()).equals("end")) {
-
             Pattern pattern = Pattern.compile("IP=(?<ip>.*?) message='[^\\']*' user=(?<user>.{3,50})");
             Matcher matcher = pattern.matcher(command);
             while (matcher.find()) {
