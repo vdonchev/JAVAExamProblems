@@ -37,7 +37,6 @@ public class UserLogs {
         }
 
         for (String entry : log.keySet()) {
-
             System.out.printf("%s: \n", entry);
 
             boolean first = true;
