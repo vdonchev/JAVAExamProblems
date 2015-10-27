@@ -8,7 +8,6 @@ public class TheHeiganDance {
     public static boolean gameOver = false;
 
     public static void main(String[] args) {
-        Locale.setDefault(Locale.ROOT);
         Scanner scanner = new Scanner(System.in);
         double playerDamage = Double.parseDouble(scanner.nextLine());
 
