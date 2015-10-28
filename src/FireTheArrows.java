@@ -23,7 +23,17 @@ public class FireTheArrows {
             for (int row = 0; row < matrixRows; row++) {
                 for (int col = 0; col < matrix[0].length; col++) {
                     if (matrix[row][col] != BLANK) {
-                        if (moveArrow(matrix[row][col], row, col)) {
+                        int newRow = row;
+                        int newCol = col;
+                        switch (matrix[row][col]) {
+                            case UP: newRow--; break;
+                            case RIGHT: newCol++; break;
+                            case DOWN: newRow++; break;
+                            case LEFT: newCol--; break;
+                        }
+
+                        if (newRow >= 0 && newCol >= 0 && newRow < matrix.length && newCol < matrix[0].length && matrix[newRow][newCol] == BLANK) {
+                            matrix[newRow][newCol] = matrix[row][col];
                             matrix[row][col] = BLANK;
                             moved = true;
                         }
@@ -42,25 +52,5 @@ public class FireTheArrows {
             }
             System.out.println();
         }
-    }
-
-    private static boolean moveArrow(char arrow, int row, int col) {
-        switch (arrow) {
-            case UP: row--; break;
-            case RIGHT: col++; break;
-            case DOWN: row++; break;
-            case LEFT: col--; break;
-        }
-
-        return canBeMoved(arrow, row, col);
-    }
-
-    private static boolean canBeMoved(char arrow, int row, int col) {
-        if (row >= 0 && col >= 0 && row < matrix.length && col < matrix[0].length && matrix[row][col] == BLANK) {
-            matrix[row][col] = arrow;
-            return true;
-        }
-
-        return false;
     }
 }
