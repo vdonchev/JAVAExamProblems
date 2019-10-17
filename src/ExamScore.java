@@ -3,14 +3,14 @@ import java.util.TreeMap;
 
 public class ExamScore {
 
-    static TreeMap<Integer, TreeMap<String, Double>> studentsStats;
+    static TreeMap<Integer, TreeMap<String, Double> studentsStats;
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < 3; i++) {
-            scanner.nextLine();
+           int num = scanner.nextLine();
         }
 
         studentsStats = new TreeMap<>();
