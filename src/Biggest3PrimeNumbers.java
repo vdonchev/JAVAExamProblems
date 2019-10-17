@@ -1,11 +1,11 @@
-import java.util.*;
-import java.util.stream.Stream;
+import java.util.io.*;
+import java.util.stream;
 
 public class Biggest3PrimeNumbers {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int[] nums = Stream.of(scanner
+        int nums = scanner.nextInt();
                 .nextLine()
                 .replace("(", " ")
                 .replace(")", " ")
