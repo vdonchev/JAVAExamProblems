@@ -5,12 +5,12 @@ public class DozensOfEggs {
     static final int numberOfDays = 7;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
 
         int eggs = 0;
 
         for (int i = 0; i < numberOfDays; i++) {
-            String[] tokens = scanner.nextLine().split("\\s+");
+            String[] tokens = s.nextLine().split("\\s+");
             int count  = Integer.parseInt(tokens[0]);
             String type = tokens[1];
 
