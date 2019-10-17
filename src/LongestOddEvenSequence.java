@@ -1,8 +1,8 @@
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class LongestOddEvenSequence {
-    public static void main(String[] args) {
+public class LongestOddEvenSequencess {
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int[] nums = Stream.of(scanner
                 .nextLine()
